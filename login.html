@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>Login-Register</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/auth.js"></script>
+    <script src="js/login-register.js"></script>
+</head>
+
+<body onload="loginAuth()">
+    <nav>
+        <div class="nav-wrapper green darken-4">
+            <a href="#" class="brand-logo center">Pratilipi Chat</a>
+        </div>
+    </nav>
+
+    <main class="row container">
+        <div class="col s12 l6 m12">
+            <form class="col s12">
+                <h3 class="center-align">Login</h3>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="lusername" type="text" class="validate" autocomplete="off">
+                        <label for="lusername">Username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="lpassword" type="password" class="validate" autocomplete="off">
+                        <label for="lpassword">Password</label>
+                    </div>
+                </div>
+                <a class="waves-effect waves-light btn green darken-4" id="login_btn" onclick="login()">Login</a>
+            </form>
+        </div>
+        <div class="col s12 l6 m12">
+            <form class="col s12">
+                <h3 class="center-align">Register</h3>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="rusername" type="text" class="validate" autocomplete="off">
+                        <label for="rusername">Username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="rpassword" type="password" class="validate" autocomplete="off">
+                        <label for="rpassword">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="rcpassword" type="password" class="validate" autocomplete="off">
+                        <label for="rcpassword">Confirm Password</label>
+                    </div>
+                </div>
+                <a class="waves-effect waves-light btn green darken-4" id="register_btn" onclick="register()">Register</a>
+            </form>
+        </div>
+    </main>
+    <footer class="page-footer green darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 s12">
+                    <div class="center">Developed By</div>
+                    <div class="center" style="font-size: 24">Anmol Saxena</div>
+                    <div class="center">
+                        <a class="" href="https://github.com/anmolsaxena10/suggestify" target="_blank"><i
+                                class="fab fa-github fa-2x" style="color: white;" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
