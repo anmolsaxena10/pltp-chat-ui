@@ -42,7 +42,7 @@ var loadMessages = function () {
 var showMessages = function (messages, username) {
     messages.forEach(message => {
         var date = new Date(message.ts);
-        date = date.getDate() + "-" + (date.getMonth()+1) + "-" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes();
+        date = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes();
         if (message.to == username) {
             var html = `<li class="collection-item avatar right-align">
                             <i class="medium material-icons circle lime darken-4">arrow_upward</i>
@@ -51,7 +51,7 @@ var showMessages = function (messages, username) {
                         </li>`;
             $('#bucket').append(html);
         }
-        else if(message.from == username) {
+        else if (message.from == username) {
             var html = `<li class="collection-item avatar">
                             <i class="medium material-icons circle green darken-4">arrow_downward</i>
                             <span class="title">`+ message.message + `</span>
@@ -59,10 +59,12 @@ var showMessages = function (messages, username) {
                         </li>`;
             $('#bucket').append(html);
         }
-        else{
+        else {
             M.toast({ html: 'Message received from ' + message.from });
         }
     });
+    var element = document.getElementById("bucket");
+    element.scrollTop = element.scrollHeight;
 }
 
 const socket = io('http://192.168.1.7:8899?token=' + localStorage.getItem("token"));
@@ -82,4 +84,5 @@ var sendMessage = function () {
         "ts": (new Date()).getTime()
     }
     socket.emit("message", message);
+    $('#message').val("");
 };
