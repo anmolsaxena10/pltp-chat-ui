@@ -1,5 +1,3 @@
-var api_url = "http://localhost:8899/api/";
-
 var login = function () {
     $('#login_btn').attr("disabled", true);
     var username = $("#lusername").val();

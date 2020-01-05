@@ -31,7 +31,7 @@ var loadUsers = function () {
 var displayUsers = function (users) {
     users.forEach(user => {
         var html = `<div class="col s6 m3 l2 center-align">
-                        <a onclick="openChat('`+ user._id + `')">
+                        <a onclick="openChat('`+ user.username + `')">
                             <div class="card-panel hoverable green darken-4">
                                 <span class="white-text">`+user.username+`</span>
                             </div>
@@ -43,5 +43,5 @@ var displayUsers = function (users) {
 
 var openChat = function (userid) {
     console.log(userid);
-    window.location.href = './chat.html?uid='+userid;
+    window.location.href = './chat.html?uname='+userid;
 }

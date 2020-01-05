@@ -13,17 +13,36 @@
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/auth.js"></script>
+    <script src="js/socket.io.js"></script>
     <script src="js/chat.js"></script>
 </head>
 
 <body onload="chatAuth()">
     <nav>
         <div class="nav-wrapper green darken-4">
-            <a href="#" class="brand-logo center">Chat</a>
+            <a href="#" class="brand-logo center"></a>
         </div>
     </nav>
-    <main class="row container" id="bucket">
-        
+    <main class="row container" >
+        <ul class="collection col s12" id="bucket" style="overflow-y: scroll;max-height: 69vh">
+            <!-- <li class="collection-item avatar right-align">
+                <i class="material-icons circle green darken-4">arrow_upward</i>
+                <span class="title">Message</span>
+                <p>time</p>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green darken-4">arrow_downward</i>
+                <span class="title">Message</span>
+                <p>Time</p>
+            </li> -->
+        </ul>
+        <div class="input-field col s10 m10 l10">
+            <input id="message" type="text">
+            <label for="message" class="validate green-text darken-4">Message</label>
+        </div>
+        <div class="input-field col s2 m2 l2 ">
+                <a onclick="sendMessage()" class="btn-floating waves-effect waves-light green darken-4"><i class="medium material-icons circle ">arrow_forward</i></a>
+        </div>
     </main>
     <footer class="page-footer green darken-4">
         <div class="container">

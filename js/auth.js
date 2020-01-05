@@ -1,4 +1,4 @@
-var api_url = "http://localhost:8899/api/";
+var api_url = "http://192.168.1.7:8899/api/";
 
 var indexAuth = function(){
     var token = localStorage.getItem("token");
@@ -19,7 +19,7 @@ var indexAuth = function(){
         });
     }
     else{
-        window.location.href = window.location.hostname + "login.html";
+        window.location.href = "./login.html";
     }
 }
 
@@ -84,6 +84,9 @@ var chatAuth = function(){
                 if(!result.status){
                     localStorage.removeItem("token");
                     window.location.href = "./login.html";
+                }
+                else{
+                    loadMessages();
                 }
             }
         });
