@@ -1,4 +1,4 @@
-var api_url = "http://192.168.1.7:8899/api/";
+var api_url = "https://pltp-chat-server.herokuapp.com/api/";
 
 var indexAuth = function(){
     var token = localStorage.getItem("token");

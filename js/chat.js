@@ -67,7 +67,7 @@ var showMessages = function (messages, username) {
     element.scrollTop = element.scrollHeight;
 }
 
-const socket = io('http://192.168.1.7:8899?token=' + localStorage.getItem("token"));
+const socket = io('https://pltp-chat-server.herokuapp.com?token=' + localStorage.getItem("token"));
 
 socket.on("message", (message) => {
     var url = new URL(window.location.href);
