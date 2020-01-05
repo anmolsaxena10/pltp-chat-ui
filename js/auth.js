@@ -95,3 +95,8 @@ var chatAuth = function(){
         window.location.href = "./login.html";
     }
 }
+
+var logout = function(){
+    localStorage.removeItem("token");
+    window.location.href = './login.html';
+}

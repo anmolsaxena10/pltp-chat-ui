@@ -2,7 +2,7 @@
 
 <head>
     <title>Chat</title>
-    <link rel='icon' href='favicon.png' type='image/x-icon'/ >
+    <link rel='icon' href='favicon.png' type='image/x-icon'/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -22,9 +22,12 @@
     <nav>
         <div class="nav-wrapper green darken-4">
             <a href="#" class="brand-logo center"></a>
+            <ul class="right">
+                <li><a onclick="logout()">Logout</a></li>
+            </ul>
         </div>
     </nav>
-    <main class="row container" >
+    <main class="row container">
         <ul class="collection col s12" id="bucket" style="overflow-y: scroll;max-height: 69vh">
             <!-- <li class="collection-item avatar right-align">
                 <i class="material-icons circle green darken-4">arrow_upward</i>
@@ -42,7 +45,8 @@
             <label for="message" class="validate green-text darken-4">Message</label>
         </div>
         <div class="input-field col s2 m2 l2 ">
-                <a onclick="sendMessage()" class="btn-floating waves-effect waves-light green darken-4"><i class="medium material-icons circle ">arrow_forward</i></a>
+            <a onclick="sendMessage()" class="btn-floating waves-effect waves-light green darken-4"><i
+                    class="medium material-icons circle ">arrow_forward</i></a>
         </div>
     </main>
     <footer class="page-footer green darken-4">
