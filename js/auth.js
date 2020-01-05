@@ -12,9 +12,9 @@ var indexAuth = function(){
             success: function(result){
                 console.log(result);
                 if(!result.status)
-                    window.location.href = window.location.href + "login.html";
+                    window.location.href = "./login.html";
                 else
-                    window.location.href = window.location.href + "users.html";
+                    window.location.href = "./users.html";
             }
         });
     }
